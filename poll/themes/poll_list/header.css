@@ -1,0 +1,85 @@
+#bskradm { font-size: 12px; }
+#bskradm h2 {font-size:14px;font-family:dotum;font-weight:bold;border-bottom:#efefef solid 1px;padding:10px 0 10px 0;margin:0 0 20px 0;letter-spacing:-1px;}
+#bskradm .table .title {background-color: #f9f9f9;}
+#bskradm .table .new {color: #ff0000;}
+#bskradm .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border-top: 0;}
+#bskradm .td1 {padding:14px 0 5px;width:115px;vertical-align:top;}
+#bskradm .td2 {padding:10px 0 5px 10px;color:#666666; vertical-align:middle;}
+#bskradm .td2 .sname {width:174px;}
+#bskradm .td2 .sname1 {width:307px;}
+#bskradm .td2 .sname2 {width:82px;}
+#bskradm .td2 .select1 {width:180px;letter-spacing:-1px;}
+#bskradm .td2 .guide {font-size:11px;font-family:dotum;color:#555;line-height:150%;padding:10px 0 0 0;}
+#bskradm .td2 .dn {margin-bottom:-5px;}
+#bskradm .td2 .dm {position:relative;top:2px;padding:5px;margin:0 3px 0 0;border:#dfdfdf solid 1px;background:#f9f9f9;cursor:pointer;}
+#bskradm .td2 .add {height:40px;}
+#bskradm .td2 textarea {padding:5px;margin:0;width:330px;height:100px;overflow-x:hidden;overflow-y:auto;line-height:150%;color:#000000;font-family:Courier new, arial, dotum;font-size:9pt;text-align:left;}
+#bskradm .submitbox {margin:20px 0;padding:15px 0 0 107px;border-top:#dfdfdf dashed 1px; text-align:right;}
+
+#bskradm label {font-weight:normal;}
+#bskradm label input[type="checkbox"],#bskradm label input[type="radio"] {position:relative; top:2px;}
+
+#bskrlist { font-size: 12px; }
+#bskrlist table img {position:relative; top:-2px;}
+#bskrlist .center { text-align: center; }
+#bskrlist .btn {font-size:12px; font-family: "Nanum Gothic", "Malgun Gothic", "Dotum"; font-weight: bold;}
+
+#bskrlist .sbox {padding:0 0 30px 0;}
+#bskrlist .sbox .account {width:192px;}
+#bskrlist .sbox select {min-height:22px; position:relative; top:1px;}
+#bskrlist .sbox .input {margin:0 0 0 10px;height:22px;}
+#bskrlist .sbox label {font-weight:normal; position:relative; top:2px;}
+#bskrlist .sbox input[type="checkbox"] {position:relative; top:2px;}
+#bskrlist .sbox div {padding:10px 0 0 0;}
+
+#bskrlist .table-admin {
+	border-top: 2px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+#bskrlist .table-admin th {
+	background-color: #f2f2f2;
+	text-align:center;
+}
+#bskrlist .table-admin td {
+	text-align:center;
+	vertical-align:middle;
+}
+#bskrlist .sbj .comment {
+font: normal 11px arial;
+color: #FC6138;
+}
+#bskrlist .sbj .new {
+color: #ff0000;
+}
+
+#bskrlist .pagebox01 {margin: 10px 0; text-align:center;}
+#bskrlist .pagebox01 .selected,.pagebox .notselected:hover {padding:0 4px 0 4px;font-family:arial;font-size:12px;font-weight:bold;color:#FF5B01;}
+#bskrlist .pagebox01 .notselected {padding:0 4px 0 4px;text-decoration:none;font-family:arial;font-size:12px;color:#222;font-weight:bold;}
+#bskrlist .pagebox01 img {padding:0 4px 0 4px;margin-bottom:-2px;}
+#bskradm ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#bskradm ul.tabs li{
+  display: inline-block;
+	background: #e0e0e0;
+	color: #222;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+#bskradm ul.tabs li.current{
+	background: #898989;
+	color: white;
+}
+
+#bskradm .tab-content{
+  display: none;
+	padding: 12px;
+}
+
+#bskradm .tab-content.current{
+	display: inherit;
+}

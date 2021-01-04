@@ -1,0 +1,33 @@
+#bskrlist { font-size: 12px; }
+#bskrlist table img {position:relative; top:-2px;}
+#bskrlist .center { text-align: center; }
+#bskrlist .right { text-align: right; }
+#bskrlist .btn {font-size:12px; font-family: "Nanum Gothic", "Malgun Gothic", "Dotum"; font-weight: bold;}
+
+#bskrlist .sbox {padding:0 0 30px 0;}
+#bskrlist .sbox .account {width:192px;}
+#bskrlist .sbox select {min-height:22px; position:relative; top:1px;}
+#bskrlist .sbox .input {margin:0 0 0 10px;height:22px;}
+#bskrlist .sbox label {font-weight:normal; position:relative; top:2px;}
+#bskrlist .sbox input[type="checkbox"] {position:relative; top:2px;}
+#bskrlist .sbox div {padding:10px 0 0 0;}
+
+#bskrlist .table-admin {
+	border-top: 2px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+#bskrlist .table-admin th {
+	background-color: #f2f2f2;
+}
+#bskrlist .sbj .comment {
+font: normal 11px arial;
+color: #FC6138;
+}
+#bskrlist .sbj .new {
+color: #ff0000;
+}
+
+#bskrlist .pagebox01 {margin: 10px 0; text-align:center;}
+#bskrlist .pagebox01 .selected,.pagebox .notselected:hover {padding:0 4px 0 4px;font-family:arial;font-size:12px;font-weight:bold;color:#FF5B01;}
+#bskrlist .pagebox01 .notselected {padding:0 4px 0 4px;text-decoration:none;font-family:arial;font-size:12px;color:#222;font-weight:bold;}
+#bskrlist .pagebox01 img {padding:0 4px 0 4px;margin-bottom:-2px;}
