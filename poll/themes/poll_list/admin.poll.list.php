@@ -41,11 +41,7 @@ $colspan = 9;
 </div>
 </form>
 
-<div style="text-align:right">
-    <a href="./poll_form2.php" id="poll_add" class="btn btn-primary">신규 투표 등록</a>
-	<br>
-	<br>
-</div>
+
 <div id="bskrlist">
 	<form name="alistForm" action="<?php echo $g['s']?>/">
 		<input type="hidden" name="r" value="<?php echo $r?>" />
@@ -53,6 +49,11 @@ $colspan = 9;
 		<input type="hidden" name="mod" value="<?php echo $mod?>" />
 		<input type="hidden" name="smod" value="" />
 		<input type="hidden" name="pid" value="" />
+		<div style="text-align:right">
+			<input class="btn btn-sm btn-primary" type="submit" value="신규 투표 등록" onclick="updateOpen('insert','')">
+			<br>
+			<br>
+		</div>
 		<div class="table-responsive">
 			<table class="table table-striped table-admin">
 			<thead>

@@ -27,15 +27,13 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 	</div>
 
 
-	<form name="fpoll" id="fpoll" action="./poll_form_update2.php" onsubmit="return poll_submit(this);" method="post" enctype="multipart/form-data">
-	<input type="hidden" name="po_id" value="<?php echo $po_id ?>">
-	<input type="hidden" name="w" value="<?php echo $w ?>">
-	<input type="hidden" name="sfl" value="<?php echo $sfl ?>">
-	<input type="hidden" name="stx" value="<?php echo $stx ?>">
-	<input type="hidden" name="sst" value="<?php echo $sst ?>">
-	<input type="hidden" name="sod" value="<?php echo $sod ?>">
-	<input type="hidden" name="page" value="<?php echo $page ?>">
-	<input type="hidden" name="token" value="">
+	<form name="writeForm" method="post" action="<?php echo $g['s']?>/" target="_action_frame_<?php echo $m?>" onsubmit="return updateCheck(this);">
+	<input type="hidden" name="pid" value="<?php echo $pid ?>">
+	<input type="hidden" name="r" value="<?php echo $r?>" />
+	<input type="hidden" name="a" value="update" />
+	<input type="hidden" name="m" value="<?php echo $m?>" />
+	<input type="hidden" name="mod" value="<?php echo $mod?>" />
+	<input type="hidden" name="smod" value="<?php echo $smod?>" />
 
 	<div class="table-responsive">
 		<table class="table table-striped table-admin">
@@ -93,12 +91,23 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 		<?php endif ?>
 		<tr>
 			<th class="tleft" scope="row">투표 시작일<?php if($smod == 'update') : ?> <strong style="color:red">수정불가능합니다.</strong> <?php endif ?></th>
-			<td class="tleft"> <input type="text" name="start" value="<?php echo $P['start'] ?>" id="start" class="frm_input" size="11" maxlength="10" <?php if($smod == 'update') : ?> disabled <?php endif ?>></td>
+			<?php if($smod == 'update') : ?>
+				<td class="tleft"> <?php echo $P['start'] ?></td>
+				<input type="hidden" name="start" value="<?php echo $P['start'] ?>" id="start" class="frm_input" size="11" maxlength="10">
+			<?php else : ?>
+				<td class="tleft"> <input type="text" name="start" value="<?php echo $P['start'] ?>" id="start" class="frm_input" size="11" maxlength="10"></td>
+			<?php endif ?>
+			
 		</tr>
 
 		<tr>
 			<th class="tleft" scope="row">투표 종료일<?php if($smod == 'update') : ?> <strong style="color:red">수정불가능합니다.</strong> <?php endif ?></th>
-			<td class="tleft"> <input type="text" name="end" value="<?php echo $P['end'] ?>" id="end" class="frm_input" size="11" maxlength="10" <?php if($smod == 'update') : ?> disabled <?php endif ?>></td>
+			<?php if($smod == 'update') : ?>
+				<td class="tleft"> <?php echo $P['end'] ?></td>
+				<input type="hidden" name="end" value="<?php echo $P['end'] ?>" id="end" class="frm_input" size="11" maxlength="10">
+			<?php else : ?>
+				<td class="tleft"> <input type="text" name="end" value="<?php echo $P['end'] ?>" id="end" class="frm_input" size="11" maxlength="10"></td>
+			<?php endif ?>
 		</tr>
 		<tr>
 			<th class="tleft" scope="row"><label for="content">선거정보/투표내용</label></th>
@@ -159,12 +168,12 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 	<div class="btn_confirm01 btn_confirm">
 		
 		<?php if($smod == 'update') : ?>
-		<button type="submit" class="btn btn-sm btn-primary">수정</button>
+		<button type="submit" class="btn btn-sm btn-success">수정</button>
 		<?php elseif($smod == 'insert') : ?>
 		<button type="submit" class="btn btn-sm btn-primary">저장</button>
 		<?php endif ?>
-		<button type="submit" class="btn btn-sm btn-primary">목록으로</button>
-		<button type="submit" class="btn btn-sm btn-primary">결과출력</button>
+		<button type="button" class="btn btn-sm btn-primary" onclick="returnList()">목록으로</button>
+		<button type="button" class="btn btn-sm btn-primary">결과출력</button>
 		<a href="./poll_list2.php?<?php echo $qstr ?>">목록</a>
 		<a href="./poll_print.php?po_id=<?php echo $po_id ?>" target=_blank>결과출력</a>
 	<br><br><font color=#ff0000>※ 결과출력(새창에서 오른쪽 마우스 버튼을 누르고 인쇄하기를 하시면 됩니다)</font>
@@ -174,28 +183,46 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 
 </div>
 
+<form id="hiddenupdateform" name="hiddenupdateform" action="<?php echo $g['s']?>/">
+	<input type="hidden" name="r" value="<?php echo $r?>" />
+	<input type="hidden" name="c" value="<?php echo $c?>" />
+	<input type="hidden" name="m" value="<?php echo $m?>" />
+	<input type="hidden" id="mod" name="mod" value="<?php echo $mod?>">
+</form>
+
 <script>
-
-
-function poll_submit(f)
+function returnList(){
+	document.hiddenupdateform.submit();
+}
+function updateCheck(f)
 {
-	if( $("#start").val() =="" || $("#start").val()=="0000-00-00")
+	if (f.po_subject.value == '')
+	{
+		alert("투표 제목을 입력해주세요.");
+		return false;
+	}
+	if(f.po_poll1.value == ''){
+		alert("1번항목은 필수 입력입니다.");
+		return false;
+	}
+	if(f.po_poll2.value == ''){
+		alert("2번항목은 필수 입력입니다.");
+		return false;
+	}
+	if(f.start.value == '' || f.start.value == '0000-00-00'){
+		alert("시작일자는 필수 입력입니다.");
+		return false;
+	}
+	if(f.end.value == '' || f.end.value == '0000-00-00'){
+		alert("종료일자는 필수 입력입니다.");
+		return false;
+	}
+	if(f.start.value > f.end.value )
 	{
 		alert('기간이 잘못 설정되었습니다.');
 		return false;
 	}
-	if( $("#end").val() =="" || $("#end").val()=="0000-00-00")
-	{
-		alert('기간이 잘못 설정되었습니다.');
-		return false;
-	}
-
-	if( $("#start").val() > $("#end").val() )
-	{
-		alert('기간이 잘못 설정되었습니다.');
-		return false;
-	}
-    return true;
+	return true;
 }
 
 $(document).ready(function()
