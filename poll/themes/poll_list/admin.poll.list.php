@@ -21,7 +21,7 @@ $TPG = getTotalPage($NUM,$recnum);
 
 $colspan = 9;
 ?>
-<div id="bskradm">
+<div id="bskrlist">
 	<div class="local_ov01 local_ov">
 		<h2>투표수 <?php echo number_format($NUM) ?>개
 		&nbsp;<font color=#ff0000>최초 등록후 투표일자는 수정할 수 없습니다.</font></h2>
@@ -47,10 +47,12 @@ $colspan = 9;
 	<br>
 </div>
 <div id="bskrlist">
-	<form name="listForm" action="<?php echo $g['s']?>/" method="post" target="_action_frame_<?php echo $m?>">
+	<form name="alistForm" action="<?php echo $g['s']?>/">
 		<input type="hidden" name="r" value="<?php echo $r?>" />
-		<input type="hidden" name="m" value="<?php echo $module?>" />
-		<input type="hidden" name="a" value="" />	
+		<input type="hidden" name="m" value="<?php echo $m?>" />
+		<input type="hidden" name="mod" value="<?php echo $mod?>" />
+		<input type="hidden" name="smod" value="" />
+		<input type="hidden" name="pid" value="" />
 		<div class="table-responsive">
 			<table class="table table-striped table-admin">
 			<thead>
@@ -88,10 +90,10 @@ $colspan = 9;
 							 }
 							 else
 							 {
-								 echo "<font color=#0000ff>".$row2['cnt']."명</font><br>";
+								 echo "<font color=#0000ff>".$puser."명</font><br>";
 							 }
 						?>
-						<a href="./pollexcel.php?po_id=<?=$R['po_id']?>" onclick="return excelform(this.href);" target="_blank">등록</a>
+						<a href="<?php echo $g['dir_module_skin'] ?>pollexcel.php?po_id=<?=$R['po_id']?>" onclick="return excelform(this.href);" target="_blank">등록</a>
 
 
 					   <a href="./poll_user_remove.php?po_id=<?=$R['po_id']?>" onclick="return complate_confirm();">삭제</a>
@@ -100,7 +102,7 @@ $colspan = 9;
 					</td>
 					<td class="td_num"><?php echo $R['start'] ?></td>
 					<td class="td_num"><?php echo $R['end'] ?></td>
-					<td class="td_mngsmall"><input class="btn btn-sm btn-primary" type="submit" value="수정"></td>
+					<td class="td_mngsmall"><input class="btn btn-sm btn-primary" type="submit" value="수정" onclick="updateOpen('update',<?php echo "'".$R['po_id']."'"?>)"></td>
 				</tr>
 			
 			<?php endwhile; ?>
@@ -130,7 +132,10 @@ function excelform(url)
     return false;
 }
 
-
+function updateOpen(cmd, v){
+	document.alistForm.smod.value = cmd;
+	document.alistForm.pid.value = v;
+}
 
 function complate_confirm()
 {

@@ -1,23 +1,23 @@
-#bskradm { font-size: 12px; }
-#bskradm h2 {font-size:14px;font-family:dotum;font-weight:bold;border-bottom:#efefef solid 1px;padding:10px 0 10px 0;margin:0 0 20px 0;letter-spacing:-1px;}
-#bskradm .table .title {background-color: #f9f9f9;}
-#bskradm .table .new {color: #ff0000;}
-#bskradm .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border-top: 0;}
-#bskradm .td1 {padding:14px 0 5px;width:115px;vertical-align:top;}
-#bskradm .td2 {padding:10px 0 5px 10px;color:#666666; vertical-align:middle;}
-#bskradm .td2 .sname {width:174px;}
-#bskradm .td2 .sname1 {width:307px;}
-#bskradm .td2 .sname2 {width:82px;}
-#bskradm .td2 .select1 {width:180px;letter-spacing:-1px;}
-#bskradm .td2 .guide {font-size:11px;font-family:dotum;color:#555;line-height:150%;padding:10px 0 0 0;}
-#bskradm .td2 .dn {margin-bottom:-5px;}
-#bskradm .td2 .dm {position:relative;top:2px;padding:5px;margin:0 3px 0 0;border:#dfdfdf solid 1px;background:#f9f9f9;cursor:pointer;}
-#bskradm .td2 .add {height:40px;}
-#bskradm .td2 textarea {padding:5px;margin:0;width:330px;height:100px;overflow-x:hidden;overflow-y:auto;line-height:150%;color:#000000;font-family:Courier new, arial, dotum;font-size:9pt;text-align:left;}
-#bskradm .submitbox {margin:20px 0;padding:15px 0 0 107px;border-top:#dfdfdf dashed 1px; text-align:right;}
+#bskrlist { font-size: 12px; }
+#bskrlist h2 {font-size:14px;font-family:dotum;font-weight:bold;border-bottom:#efefef solid 1px;padding:10px 0 10px 0;margin:0 0 20px 0;letter-spacing:-1px;}
+#bskrlist .table .title {background-color: #f9f9f9;}
+#bskrlist .table .new {color: #ff0000;}
+#bskrlist .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border-top: 0;}
+#bskrlist .td1 {padding:14px 0 5px;width:115px;vertical-align:top;}
+#bskrlist .td2 {padding:10px 0 5px 10px;color:#666666; vertical-align:middle;}
+#bskrlist .td2 .sname {width:174px;}
+#bskrlist .td2 .sname1 {width:307px;}
+#bskrlist .td2 .sname2 {width:82px;}
+#bskrlist .td2 .select1 {width:180px;letter-spacing:-1px;}
+#bskrlist .td2 .guide {font-size:11px;font-family:dotum;color:#555;line-height:150%;padding:10px 0 0 0;}
+#bskrlist .td2 .dn {margin-bottom:-5px;}
+#bskrlist .td2 .dm {position:relative;top:2px;padding:5px;margin:0 3px 0 0;border:#dfdfdf solid 1px;background:#f9f9f9;cursor:pointer;}
+#bskrlist .td2 .add {height:40px;}
+#bskrlist .td2 textarea {padding:5px;margin:0;width:330px;height:100px;overflow-x:hidden;overflow-y:auto;line-height:150%;color:#000000;font-family:Courier new, arial, dotum;font-size:9pt;text-align:left;}
+#bskrlist .submitbox {margin:20px 0;padding:15px 0 0 107px;border-top:#dfdfdf dashed 1px; text-align:right;}
 
-#bskradm label {font-weight:normal;}
-#bskradm label input[type="checkbox"],#bskradm label input[type="radio"] {position:relative; top:2px;}
+#bskrlist label {font-weight:normal;}
+#bskrlist label input[type="checkbox"],#bskrlist label input[type="radio"] {position:relative; top:2px;}
 
 #bskrlist { font-size: 12px; }
 #bskrlist table img {position:relative; top:-2px;}
@@ -44,6 +44,25 @@
 	text-align:center;
 	vertical-align:middle;
 }
+#bskrlist .default-table td {
+	text-align:center;
+	vertical-align:middle;
+	border:#000000 solid 1px;
+}#bskrlist .default-table>tbody>tr>th {
+	text-align:center;
+	font-size:17px;
+	font-weight:bold;
+	vertical-align:middle;
+	border:#000000 solid 1px;
+}
+#bskrlist th.tleft {
+	text-align:left;
+	vertical-align:middle;
+}
+#bskrlist td.tleft {
+	text-align:left;
+	vertical-align:middle;
+}
 #bskrlist .sbj .comment {
 font: normal 11px arial;
 color: #FC6138;
@@ -56,13 +75,13 @@ color: #ff0000;
 #bskrlist .pagebox01 .selected,.pagebox .notselected:hover {padding:0 4px 0 4px;font-family:arial;font-size:12px;font-weight:bold;color:#FF5B01;}
 #bskrlist .pagebox01 .notselected {padding:0 4px 0 4px;text-decoration:none;font-family:arial;font-size:12px;color:#222;font-weight:bold;}
 #bskrlist .pagebox01 img {padding:0 4px 0 4px;margin-bottom:-2px;}
-#bskradm ul.tabs{
+#bskrlist ul.tabs{
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
 }
 
-#bskradm ul.tabs li{
+#bskrlist ul.tabs li{
   display: inline-block;
 	background: #e0e0e0;
 	color: #222;
@@ -70,16 +89,1223 @@ color: #ff0000;
 	cursor: pointer;
 }
 
-#bskradm ul.tabs li.current{
+#bskrlist ul.tabs li.current{
 	background: #898989;
 	color: white;
 }
 
-#bskradm .tab-content{
+#bskrlist .tab-content{
   display: none;
 	padding: 12px;
 }
 
-#bskradm .tab-content.current{
+#bskrlist .tab-content.current{
 	display: inherit;
+}
+
+#bskrlist .sound_only {display:inline-block !important;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;width:1px !important;height:1px !important;font-size:0;line-height:0;border:0 !important;overflow:hidden !important}
+
+
+#bskrlist .charts span {
+    text-transform: uppercase
+}
+#bskrlist .charts--vertical {
+    height: 25rem;
+    display: inline-block
+}
+#bskrlist .charts--vertical .charts__percent {
+    display: table;
+    position: relative;
+    top: 50%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    left: -0.5rem;
+    color: #ebeded
+}
+#bskrlist .charts--vertical .charts__percent:empty::after {
+    content: "100%";
+    margin-left: 0.345rem;
+    font-size: 1.1rem
+}
+#bskrlist .charts--vertical .charts__chart {
+    width: 2rem;
+    height: 100%;
+    display: inline-block;
+    margin: 0 0.2rem
+}
+#bskrlist .charts--vertical .charts__chart > .charts__chart {
+    width: 100%
+}
+#bskrlist .charts--vertical.charts--grouped::after {
+    content: "Oops! Seems that you used 'charts--grouped' in 'charts--vertical'. This isn't supported.";
+    font-size: 2rem;
+    color: #D0716F
+}
+#bskrlist .charts--vertical.charts--grouped .charts__chart {
+    display: none
+}
+#bskrlist .charts__chart[data-percent]::after {
+    content: attr(data-percent);
+    display: block;
+    position: relative;
+    color: #ebeded;
+    font-size: 1.2em;
+    top: 0.21em
+}
+#bskrlist .charts.charts--vertical .chart--p0 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p0[data-percent]::after {
+    content: "0%"
+}
+#bskrlist .charts__chart {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#bskrlist .charts__chart.chart--hover:hover {
+    background-color: #727f80
+}
+#bskrlist .charts__chart > .charts__chart {
+    height: 100%
+}
+#bskrlist .chart--xs {
+    height: 0.5em
+}
+#bskrlist .chart--xs[data-percent]::after {
+    top: -0.4em;
+    margin-left: calc(100% + 0.3em);
+    color: #667273
+}
+#bskrlist .chart--sm {
+    height: 1em
+}
+#bskrlist .chart--sm[data-percent]::after {
+    top: -0.25em;
+    margin-left: calc(100% + 0.3em);
+    color: #667273
+}
+#bskrlist .charts--vertical .chart--sm .charts__percent,
+#bskrlist .charts--vertical .chart--xs .charts__percent {
+    left: -2.2rem;
+    color: #333
+}
+#bskrlist .chart--lg {
+    height: 3em
+}
+#bskrlist .chart--lg[data-percent]::after {
+    font-size: 1.4em;
+    top: 0.33em
+}
+#bskrlist .chart--xl {
+    height: 4.5em
+}
+#bskrlist .chart--xl[data-percent]::after {
+    font-size: 2em;
+    top: 0.4em
+}
+#bskrlist .charts--vertical .chart--xs {
+    width: 0.5em;
+    margin-left: 1.5rem
+}
+#bskrlist .charts--vertical .chart--sm {
+    width: 1em;
+    margin-left: 1.4rem
+}
+#bskrlist .charts--vertical .chart--lg {
+    width: 3em
+}
+#bskrlist .charts--vertical .chart--lg .charts__percent {
+    left: 0
+}
+#bskrlist .charts--vertical .chart--xl {
+    width: 4.5em
+}
+#bskrlist .charts--vertical .chart--xl .charts__percent {
+    left: 0.75em
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p0 {
+    width: 0
+}
+#bskrlist .charts.charts--vertical .chart--p0 {
+    height: 0
+}
+#bskrlist .charts.charts--vertical .chart--p1 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p1[data-percent]::after {
+    content: "1%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p1 {
+    width: 1%
+}
+#bskrlist .charts.charts--vertical .chart--p1 {
+    height: 1%
+}
+#bskrlist .charts.charts--vertical .chart--p2 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p2[data-percent]::after {
+    content: "2%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p2 {
+    width: 2%
+}
+#bskrlist .charts.charts--vertical .chart--p2 {
+    height: 2%
+}
+#bskrlist .charts.charts--vertical .chart--p3 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p3[data-percent]::after {
+    content: "3%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p3 {
+    width: 3%
+}
+#bskrlist .charts.charts--vertical .chart--p3 {
+    height: 3%
+}
+#bskrlist .charts.charts--vertical .chart--p4 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p4[data-percent]::after {
+    content: "4%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p4 {
+    width: 4%
+}
+#bskrlist .charts.charts--vertical .chart--p4 {
+    height: 4%
+}
+#bskrlist .charts.charts--vertical .chart--p5 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p5[data-percent]::after {
+    content: "5%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p5 {
+    width: 5%
+}
+#bskrlist .charts.charts--vertical .chart--p5 {
+    height: 5%
+}
+#bskrlist .charts.charts--vertical .chart--p6 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p6[data-percent]::after {
+    content: "6%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p6 {
+    width: 6%
+}
+#bskrlist .charts.charts--vertical .chart--p6 {
+    height: 6%
+}
+#bskrlist .charts.charts--vertical .chart--p7 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p7[data-percent]::after {
+    content: "7%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p7 {
+    width: 7%
+}
+#bskrlist .charts.charts--vertical .chart--p7 {
+    height: 7%
+}
+#bskrlist .charts.charts--vertical .chart--p8 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p8[data-percent]::after {
+    content: "8%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p8 {
+    width: 8%
+}
+#bskrlist .charts.charts--vertical .chart--p8 {
+    height: 8%
+}
+#bskrlist .charts.charts--vertical .chart--p9 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p9[data-percent]::after {
+    content: "9%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p9 {
+    width: 9%
+}
+#bskrlist .charts.charts--vertical .chart--p9 {
+    height: 9%
+}
+#bskrlist .charts.charts--vertical .chart--p10 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p10[data-percent]::after {
+    content: "10%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p10 {
+    width: 10%
+}
+#bskrlist .charts.charts--vertical .chart--p10 {
+    height: 10%
+}
+#bskrlist .charts.charts--vertical .chart--p11 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p11[data-percent]::after {
+    content: "11%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p11 {
+    width: 11%
+}
+#bskrlist .charts.charts--vertical .chart--p11 {
+    height: 11%
+}
+#bskrlist .charts.charts--vertical .chart--p12 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p12[data-percent]::after {
+    content: "12%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p12 {
+    width: 12%
+}
+#bskrlist .charts.charts--vertical .chart--p12 {
+    height: 12%
+}
+#bskrlist .charts.charts--vertical .chart--p13 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p13[data-percent]::after {
+    content: "13%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p13 {
+    width: 13%
+}
+#bskrlist .charts.charts--vertical .chart--p13 {
+    height: 13%
+}
+#bskrlist .charts.charts--vertical .chart--p14 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p14[data-percent]::after {
+    content: "14%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p14 {
+    width: 14%
+}
+#bskrlist .charts.charts--vertical .chart--p14 {
+    height: 14%
+}
+#bskrlist .charts.charts--vertical .chart--p15 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p15[data-percent]::after {
+    content: "15%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p15 {
+    width: 15%
+}
+#bskrlist .charts.charts--vertical .chart--p15 {
+    height: 15%
+}
+#bskrlist .charts.charts--vertical .chart--p16 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p16[data-percent]::after {
+    content: "16%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p16 {
+    width: 16%
+}
+#bskrlist .charts.charts--vertical .chart--p16 {
+    height: 16%
+}
+#bskrlist .charts.charts--vertical .chart--p17 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p17[data-percent]::after {
+    content: "17%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p17 {
+    width: 17%
+}
+#bskrlist .charts.charts--vertical .chart--p17 {
+    height: 17%
+}
+#bskrlist .charts.charts--vertical .chart--p18 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p18[data-percent]::after {
+    content: "18%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p18 {
+    width: 18%
+}
+#bskrlist .charts.charts--vertical .chart--p18 {
+    height: 18%
+}
+#bskrlist .charts.charts--vertical .chart--p19 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p19[data-percent]::after {
+    content: "19%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p19 {
+    width: 19%
+}
+#bskrlist .charts.charts--vertical .chart--p19 {
+    height: 19%
+}
+#bskrlist .charts.charts--vertical .chart--p20 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p20[data-percent]::after {
+    content: "20%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p20 {
+    width: 20%
+}
+#bskrlist .charts.charts--vertical .chart--p20 {
+    height: 20%
+}
+#bskrlist .charts.charts--vertical .chart--p21 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p21[data-percent]::after {
+    content: "21%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p21 {
+    width: 21%
+}
+#bskrlist .charts.charts--vertical .chart--p21 {
+    height: 21%
+}
+#bskrlist .charts.charts--vertical .chart--p22 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p22[data-percent]::after {
+    content: "22%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p22 {
+    width: 22%
+}
+#bskrlist .charts.charts--vertical .chart--p22 {
+    height: 22%
+}
+#bskrlist .charts.charts--vertical .chart--p23 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p23[data-percent]::after {
+    content: "23%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p23 {
+    width: 23%
+}
+#bskrlist .charts.charts--vertical .chart--p23 {
+    height: 23%
+}
+#bskrlist .charts.charts--vertical .chart--p24 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p24[data-percent]::after {
+    content: "24%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p24 {
+    width: 24%
+}
+#bskrlist .charts.charts--vertical .chart--p24 {
+    height: 24%
+}
+#bskrlist .charts.charts--vertical .chart--p25 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p25[data-percent]::after {
+    content: "25%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p25 {
+    width: 25%
+}
+#bskrlist .charts.charts--vertical .chart--p25 {
+    height: 25%
+}
+#bskrlist .charts.charts--vertical .chart--p26 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p26[data-percent]::after {
+    content: "26%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p26 {
+    width: 26%
+}
+#bskrlist .charts.charts--vertical .chart--p26 {
+    height: 26%
+}
+#bskrlist .charts.charts--vertical .chart--p27 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p27[data-percent]::after {
+    content: "27%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p27 {
+    width: 27%
+}
+#bskrlist .charts.charts--vertical .chart--p27 {
+    height: 27%
+}
+#bskrlist .charts.charts--vertical .chart--p28 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p28[data-percent]::after {
+    content: "28%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p28 {
+    width: 28%
+}
+#bskrlist .charts.charts--vertical .chart--p28 {
+    height: 28%
+}
+#bskrlist .charts.charts--vertical .chart--p29 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p29[data-percent]::after {
+    content: "29%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p29 {
+    width: 29%
+}
+#bskrlist .charts.charts--vertical .chart--p29 {
+    height: 29%
+}
+#bskrlist .charts.charts--vertical .chart--p30 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p30[data-percent]::after {
+    content: "30%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p30 {
+    width: 30%
+}
+#bskrlist .charts.charts--vertical .chart--p30 {
+    height: 30%
+}
+#bskrlist .charts.charts--vertical .chart--p31 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p31[data-percent]::after {
+    content: "31%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p31 {
+    width: 31%
+}
+#bskrlist .charts.charts--vertical .chart--p31 {
+    height: 31%
+}
+#bskrlist .charts.charts--vertical .chart--p32 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p32[data-percent]::after {
+    content: "32%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p32 {
+    width: 32%
+}
+#bskrlist .charts.charts--vertical .chart--p32 {
+    height: 32%
+}
+#bskrlist .charts.charts--vertical .chart--p33 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p33[data-percent]::after {
+    content: "33%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p33 {
+    width: 33%
+}
+#bskrlist .charts.charts--vertical .chart--p33 {
+    height: 33%
+}
+#bskrlist .charts.charts--vertical .chart--p34 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p34[data-percent]::after {
+    content: "34%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p34 {
+    width: 34%
+}
+#bskrlist .charts.charts--vertical .chart--p34 {
+    height: 34%
+}
+#bskrlist .charts.charts--vertical .chart--p35 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p35[data-percent]::after {
+    content: "35%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p35 {
+    width: 35%
+}
+#bskrlist .charts.charts--vertical .chart--p35 {
+    height: 35%
+}
+#bskrlist .charts.charts--vertical .chart--p36 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p36[data-percent]::after {
+    content: "36%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p36 {
+    width: 36%
+}
+#bskrlist .charts.charts--vertical .chart--p36 {
+    height: 36%
+}
+#bskrlist .charts.charts--vertical .chart--p37 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p37[data-percent]::after {
+    content: "37%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p37 {
+    width: 37%
+}
+#bskrlist .charts.charts--vertical .chart--p37 {
+    height: 37%
+}
+#bskrlist .charts.charts--vertical .chart--p38 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p38[data-percent]::after {
+    content: "38%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p38 {
+    width: 38%
+}
+#bskrlist .charts.charts--vertical .chart--p38 {
+    height: 38%
+}
+#bskrlist .charts.charts--vertical .chart--p39 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p39[data-percent]::after {
+    content: "39%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p39 {
+    width: 39%
+}
+#bskrlist .charts.charts--vertical .chart--p39 {
+    height: 39%
+}
+#bskrlist .charts.charts--vertical .chart--p40 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p40[data-percent]::after {
+    content: "40%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p40 {
+    width: 40%
+}
+#bskrlist .charts.charts--vertical .chart--p40 {
+    height: 40%
+}
+#bskrlist .charts.charts--vertical .chart--p41 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p41[data-percent]::after {
+    content: "41%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p41 {
+    width: 41%
+}
+#bskrlist .charts.charts--vertical .chart--p41 {
+    height: 41%
+}
+#bskrlist .charts.charts--vertical .chart--p42 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p42[data-percent]::after {
+    content: "42%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p42 {
+    width: 42%
+}
+#bskrlist .charts.charts--vertical .chart--p42 {
+    height: 42%
+}
+#bskrlist .charts.charts--vertical .chart--p43 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p43[data-percent]::after {
+    content: "43%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p43 {
+    width: 43%
+}
+#bskrlist .charts.charts--vertical .chart--p43 {
+    height: 43%
+}
+#bskrlist .charts.charts--vertical .chart--p44 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p44[data-percent]::after {
+    content: "44%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p44 {
+    width: 44%
+}
+#bskrlist .charts.charts--vertical .chart--p44 {
+    height: 44%
+}
+#bskrlist .charts.charts--vertical .chart--p45 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p45[data-percent]::after {
+    content: "45%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p45 {
+    width: 45%
+}
+#bskrlist .charts.charts--vertical .chart--p45 {
+    height: 45%
+}
+#bskrlist .charts.charts--vertical .chart--p46 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p46[data-percent]::after {
+    content: "46%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p46 {
+    width: 46%
+}
+#bskrlist .charts.charts--vertical .chart--p46 {
+    height: 46%
+}
+#bskrlist .charts.charts--vertical .chart--p47 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p47[data-percent]::after {
+    content: "47%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p47 {
+    width: 47%
+}
+#bskrlist .charts.charts--vertical .chart--p47 {
+    height: 47%
+}
+#bskrlist .charts.charts--vertical .chart--p48 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p48[data-percent]::after {
+    content: "48%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p48 {
+    width: 48%
+}
+#bskrlist .charts.charts--vertical .chart--p48 {
+    height: 48%
+}
+#bskrlist .charts.charts--vertical .chart--p49 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p49[data-percent]::after {
+    content: "49%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p49 {
+    width: 49%
+}
+#bskrlist .charts.charts--vertical .chart--p49 {
+    height: 49%
+}
+#bskrlist .charts.charts--vertical .chart--p50 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p50[data-percent]::after {
+    content: "50%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p50 {
+    width: 50%
+}
+#bskrlist .charts.charts--vertical .chart--p50 {
+    height: 50%
+}
+#bskrlist .charts.charts--vertical .chart--p51 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p51[data-percent]::after {
+    content: "51%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p51 {
+    width: 51%
+}
+#bskrlist .charts.charts--vertical .chart--p51 {
+    height: 51%
+}
+#bskrlist .charts.charts--vertical .chart--p52 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p52[data-percent]::after {
+    content: "52%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p52 {
+    width: 52%
+}
+#bskrlist .charts.charts--vertical .chart--p52 {
+    height: 52%
+}
+#bskrlist .charts.charts--vertical .chart--p53 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p53[data-percent]::after {
+    content: "53%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p53 {
+    width: 53%
+}
+#bskrlist .charts.charts--vertical .chart--p53 {
+    height: 53%
+}
+#bskrlist .charts.charts--vertical .chart--p54 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p54[data-percent]::after {
+    content: "54%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p54 {
+    width: 54%
+}
+#bskrlist .charts.charts--vertical .chart--p54 {
+    height: 54%
+}
+#bskrlist .charts.charts--vertical .chart--p55 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p55[data-percent]::after {
+    content: "55%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p55 {
+    width: 55%
+}
+#bskrlist .charts.charts--vertical .chart--p55 {
+    height: 55%
+}
+#bskrlist .charts.charts--vertical .chart--p56 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p56[data-percent]::after {
+    content: "56%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p56 {
+    width: 56%
+}
+#bskrlist .charts.charts--vertical .chart--p56 {
+    height: 56%
+}
+#bskrlist .charts.charts--vertical .chart--p57 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p57[data-percent]::after {
+    content: "57%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p57 {
+    width: 57%
+}
+#bskrlist .charts.charts--vertical .chart--p57 {
+    height: 57%
+}
+#bskrlist .charts.charts--vertical .chart--p58 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p58[data-percent]::after {
+    content: "58%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p58 {
+    width: 58%
+}
+#bskrlist .charts.charts--vertical .chart--p58 {
+    height: 58%
+}
+#bskrlist .charts.charts--vertical .chart--p59 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p59[data-percent]::after {
+    content: "59%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p59 {
+    width: 59%
+}
+#bskrlist .charts.charts--vertical .chart--p59 {
+    height: 59%
+}
+#bskrlist .charts.charts--vertical .chart--p60 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p60[data-percent]::after {
+    content: "60%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p60 {
+    width: 60%
+}
+#bskrlist .charts.charts--vertical .chart--p60 {
+    height: 60%
+}
+#bskrlist .charts.charts--vertical .chart--p61 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p61[data-percent]::after {
+    content: "61%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p61 {
+    width: 61%
+}
+#bskrlist .charts.charts--vertical .chart--p61 {
+    height: 61%
+}
+#bskrlist .charts.charts--vertical .chart--p62 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p62[data-percent]::after {
+    content: "62%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p62 {
+    width: 62%
+}
+#bskrlist .charts.charts--vertical .chart--p62 {
+    height: 62%
+}
+#bskrlist .charts.charts--vertical .chart--p63 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p63[data-percent]::after {
+    content: "63%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p63 {
+    width: 63%
+}
+#bskrlist .charts.charts--vertical .chart--p63 {
+    height: 63%
+}
+#bskrlist .charts.charts--vertical .chart--p64 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p64[data-percent]::after {
+    content: "64%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p64 {
+    width: 64%
+}
+#bskrlist .charts.charts--vertical .chart--p64 {
+    height: 64%
+}
+#bskrlist .charts.charts--vertical .chart--p65 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p65[data-percent]::after {
+    content: "65%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p65 {
+    width: 65%
+}
+#bskrlist .charts.charts--vertical .chart--p65 {
+    height: 65%
+}
+#bskrlist .charts.charts--vertical .chart--p66 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p66[data-percent]::after {
+    content: "66%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p66 {
+    width: 66%
+}
+#bskrlist .charts.charts--vertical .chart--p66 {
+    height: 66%
+}
+#bskrlist .charts.charts--vertical .chart--p67 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p67[data-percent]::after {
+    content: "67%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p67 {
+    width: 67%
+}
+#bskrlist .charts.charts--vertical .chart--p67 {
+    height: 67%
+}
+#bskrlist .charts.charts--vertical .chart--p68 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p68[data-percent]::after {
+    content: "68%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p68 {
+    width: 68%
+}
+#bskrlist .charts.charts--vertical .chart--p68 {
+    height: 68%
+}
+#bskrlist .charts.charts--vertical .chart--p69 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p69[data-percent]::after {
+    content: "69%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p69 {
+    width: 69%
+}
+#bskrlist .charts.charts--vertical .chart--p69 {
+    height: 69%
+}
+#bskrlist .charts.charts--vertical .chart--p70 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p70[data-percent]::after {
+    content: "70%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p70 {
+    width: 70%
+}
+#bskrlist .charts.charts--vertical .chart--p70 {
+    height: 70%
+}
+#bskrlist .charts.charts--vertical .chart--p71 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p71[data-percent]::after {
+    content: "71%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p71 {
+    width: 71%
+}
+#bskrlist .charts.charts--vertical .chart--p71 {
+    height: 71%
+}
+#bskrlist .charts.charts--vertical .chart--p72 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p72[data-percent]::after {
+    content: "72%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p72 {
+    width: 72%
+}
+#bskrlist .charts.charts--vertical .chart--p72 {
+    height: 72%
+}
+#bskrlist .charts.charts--vertical .chart--p73 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p73[data-percent]::after {
+    content: "73%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p73 {
+    width: 73%
+}
+#bskrlist .charts.charts--vertical .chart--p73 {
+    height: 73%
+}
+#bskrlist .charts.charts--vertical .chart--p74 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p74[data-percent]::after {
+    content: "74%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p74 {
+    width: 74%
+}
+#bskrlist .charts.charts--vertical .chart--p74 {
+    height: 74%
+}
+#bskrlist .charts.charts--vertical .chart--p75 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p75[data-percent]::after {
+    content: "75%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p75 {
+    width: 75%
+}
+#bskrlist .charts.charts--vertical .chart--p75 {
+    height: 75%
+}
+#bskrlist .charts.charts--vertical .chart--p76 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p76[data-percent]::after {
+    content: "76%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p76 {
+    width: 76%
+}
+#bskrlist .charts.charts--vertical .chart--p76 {
+    height: 76%
+}
+#bskrlist .charts.charts--vertical .chart--p77 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p77[data-percent]::after {
+    content: "77%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p77 {
+    width: 77%
+}
+#bskrlist .charts.charts--vertical .chart--p77 {
+    height: 77%
+}
+#bskrlist .charts.charts--vertical .chart--p78 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p78[data-percent]::after {
+    content: "78%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p78 {
+    width: 78%
+}
+#bskrlist .charts.charts--vertical .chart--p78 {
+    height: 78%
+}
+#bskrlist .charts.charts--vertical .chart--p79 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p79[data-percent]::after {
+    content: "79%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p79 {
+    width: 79%
+}
+#bskrlist .charts.charts--vertical .chart--p79 {
+    height: 79%
+}
+#bskrlist .charts.charts--vertical .chart--p80 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p80[data-percent]::after {
+    content: "80%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p80 {
+    width: 80%
+}
+#bskrlist .charts.charts--vertical .chart--p80 {
+    height: 80%
+}
+#bskrlist .charts.charts--vertical .chart--p81 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p81[data-percent]::after {
+    content: "81%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p81 {
+    width: 81%
+}
+#bskrlist .charts.charts--vertical .chart--p81 {
+    height: 81%
+}
+#bskrlist .charts.charts--vertical .chart--p82 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p82[data-percent]::after {
+    content: "82%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p82 {
+    width: 82%
+}
+#bskrlist .charts.charts--vertical .chart--p82 {
+    height: 82%
+}
+#bskrlist .charts.charts--vertical .chart--p83 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p83[data-percent]::after {
+    content: "83%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p83 {
+    width: 83%
+}
+#bskrlist .charts.charts--vertical .chart--p83 {
+    height: 83%
+}
+#bskrlist .charts.charts--vertical .chart--p84 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p84[data-percent]::after {
+    content: "84%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p84 {
+    width: 84%
+}
+#bskrlist .charts.charts--vertical .chart--p84 {
+    height: 84%
+}
+#bskrlist .charts.charts--vertical .chart--p85 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p85[data-percent]::after {
+    content: "85%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p85 {
+    width: 85%
+}
+#bskrlist .charts.charts--vertical .chart--p85 {
+    height: 85%
+}
+#bskrlist .charts.charts--vertical .chart--p86 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p86[data-percent]::after {
+    content: "86%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p86 {
+    width: 86%
+}
+#bskrlist .charts.charts--vertical .chart--p86 {
+    height: 86%
+}
+#bskrlist .charts.charts--vertical .chart--p87 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p87[data-percent]::after {
+    content: "87%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p87 {
+    width: 87%
+}
+#bskrlist .charts.charts--vertical .chart--p87 {
+    height: 87%
+}
+#bskrlist .charts.charts--vertical .chart--p88 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p88[data-percent]::after {
+    content: "88%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p88 {
+    width: 88%
+}
+#bskrlist .charts.charts--vertical .chart--p88 {
+    height: 88%
+}
+#bskrlist .charts.charts--vertical .chart--p89 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p89[data-percent]::after {
+    content: "89%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p89 {
+    width: 89%
+}
+#bskrlist .charts.charts--vertical .chart--p89 {
+    height: 89%
+}
+#bskrlist .charts.charts--vertical .chart--p90 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p90[data-percent]::after {
+    content: "90%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p90 {
+    width: 90%
+}
+#bskrlist .charts.charts--vertical .chart--p90 {
+    height: 90%
+}
+#bskrlist .charts.charts--vertical .chart--p91 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p91[data-percent]::after {
+    content: "91%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p91 {
+    width: 91%
+}
+#bskrlist .charts.charts--vertical .chart--p91 {
+    height: 91%
+}
+#bskrlist .charts.charts--vertical .chart--p92 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p92[data-percent]::after {
+    content: "92%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p92 {
+    width: 92%
+}
+#bskrlist .charts.charts--vertical .chart--p92 {
+    height: 92%
+}
+#bskrlist .charts.charts--vertical .chart--p93 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p93[data-percent]::after {
+    content: "93%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p93 {
+    width: 93%
+}
+#bskrlist .charts.charts--vertical .chart--p93 {
+    height: 93%
+}
+#bskrlist .charts.charts--vertical .chart--p94 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p94[data-percent]::after {
+    content: "94%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p94 {
+    width: 94%
+}
+#bskrlist .charts.charts--vertical .chart--p94 {
+    height: 94%
+}
+#bskrlist .charts.charts--vertical .chart--p95 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p95[data-percent]::after {
+    content: "95%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p95 {
+    width: 95%
+}
+#bskrlist .charts.charts--vertical .chart--p95 {
+    height: 95%
+}
+#bskrlist .charts.charts--vertical .chart--p96 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p96[data-percent]::after {
+    content: "96%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p96 {
+    width: 96%
+}
+#bskrlist .charts.charts--vertical .chart--p96 {
+    height: 96%
+}
+#bskrlist .charts.charts--vertical .chart--p97 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p97[data-percent]::after {
+    content: "97%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p97 {
+    width: 97%
+}
+#bskrlist .charts.charts--vertical .chart--p97 {
+    height: 97%
+}
+#bskrlist .charts.charts--vertical .chart--p98 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p98[data-percent]::after {
+    content: "98%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p98 {
+    width: 98%
+}
+#bskrlist .charts.charts--vertical .chart--p98 {
+    height: 98%
+}
+#bskrlist .charts.charts--vertical .chart--p99 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p99[data-percent]::after {
+    content: "99%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p99 {
+    width: 99%
+}
+#bskrlist .charts.charts--vertical .chart--p99 {
+    height: 99%
+}
+#bskrlist .charts.charts--vertical .chart--p100 .charts__percent:empty::after,
+#bskrlist .charts:not(.charts--vertical) .chart--p100[data-percent]::after {
+    content: "100%"
+}
+#bskrlist .charts:not(.charts--vertical) .chart--p100 {
+    width: 100%
+}
+#bskrlist .charts.charts--vertical .chart--p100 {
+    height: 100%
+}
+#bskrlist .chart--default {
+    background-color: #7f8c8d
+}
+#bskrlist .chart--default.chart--hover:hover {
+    background-color: #727f80
+}
+#bskrlist .chart--blue {
+    background-color: #2980b9
+}
+#bskrlist .chart--blue.chart--hover:hover {
+    background-color: #2472a4
+}
+#bskrlist .chart--green {
+    background-color: #27ae60
+}
+#bskrlist .chart--green.chart--hover:hover {
+    background-color: #295
+}
+#bskrlist .chart--red {
+    background-color: #c0392b
+}
+#bskrlist .chart--red.chart--hover:hover {
+    background-color: #ab3326
+}
+#bskrlist .chart--yellow {
+    background-color: #f1c40f
+}
+#bskrlist .chart--yellow.chart--hover:hover {
+    background-color: #dab10d
+}
+#bskrlist .chart--grey {
+    background-color: #2c3e50
+}
+#bskrlist .chart--grey.chart--hover:hover {
+    background-color: #233140
+}
+#bskrlist .chart--inverse {
+    background-color: #ecf0f1
+}
+#bskrlist .chart--inverse.chart--hover:hover {
+    background-color: #dde4e6
+}
+#bskrlist .charts--grouped [data-percent]::after {
+    display: none
+}
+#bskrlist .justspan1{
+	float:left;
+	padding-left:10px;
+}
+#bskrlist .justspan2{
+    float:right; display:inline-block;
+	padding-right:10px;
+}
+#bskrlist .wrapdiv{
+    display: inline-block;
+    position: relative;
+    height: 2em;
+    width: 100%;
+    line-height: 2em;
+    background-color: #cfcfcf;
+    margin: 0.5em 0;
+    padding: 0.8em;
+}
+#bskrlist .wrapdivtext{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-weight:bold;
+    font-size:13px;
+    left: 0;
+    color: #ffffff;
 }
