@@ -15,6 +15,7 @@ $orderby= $orderby ? $orderby : 'asc';
 $recnum	= $recnum && $recnum < 200 ? $recnum : 20;
 
 $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목록</a>';
+$_WHERE = 'po_site="'.$s.'"';
 $RCD = getDbArray($table['polllist'],$_WHERE,'*',$sort,$orderby,$recnum,$p);
 $NUM = getDbRows($table['polllist'],$_WHERE);
 $TPG = getTotalPage($NUM,$recnum);
@@ -43,14 +44,15 @@ $colspan = 9;
 
 
 <div id="bskrlist">
-	<form name="alistForm" action="<?php echo $g['s']?>/">
+	<form name="alistForm" method="post" action="<?php echo $g['s']?>/" target="_action_frame_<?php echo $m?>" onsubmit="return deletePoll();">
 		<input type="hidden" name="r" value="<?php echo $r?>" />
 		<input type="hidden" name="m" value="<?php echo $m?>" />
+		<input type="hidden" name="a" value="" />
 		<input type="hidden" name="mod" value="<?php echo $mod?>" />
 		<input type="hidden" name="smod" value="" />
 		<input type="hidden" name="pid" value="" />
 		<div style="text-align:right">
-			<input class="btn btn-sm btn-primary" type="submit" value="신규 투표 등록" onclick="updateOpen('insert','')">
+			<input class="btn btn-sm btn-primary" type="button" value="신규 투표 등록" onclick="updateOpen('insert','')">
 			<br>
 			<br>
 		</div>
@@ -59,7 +61,7 @@ $colspan = 9;
 			<thead>
 			<tr>
 				<th scope="col" class="side1">
-					<input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all(this.form)">
+					<input type="checkbox" name="chkall" value="1" id="chkall" onclick="check_all()">
 				</th>
 				<th scope="col">번호</th>
 				<th scope="col">제목</th>
@@ -73,10 +75,10 @@ $colspan = 9;
 			</thead>
 			<tbody>
 			<?php while($R=db_fetch_array($RCD)):?>
-			
+				<?php ++$i; ?>
 				<tr>
 					<td class="td_chk">
-						<input type="checkbox" name="chk[]" value="<?php echo $row['po_id'] ?>" id="chk_<?php echo $i ?>">
+						<input type="checkbox" name="chk[]" value="<?php echo $R['po_id'] ?>" id="chk_<?php echo $i ?>">
 					</td>
 					<td class="td_num"><?php echo $R['po_id'] ?></td>
 					<td><?php echo $R['po_subject'] ?></td>
@@ -103,7 +105,7 @@ $colspan = 9;
 					</td>
 					<td class="td_num"><?php echo $R['start'] ?></td>
 					<td class="td_num"><?php echo $R['end'] ?></td>
-					<td class="td_mngsmall"><input class="btn btn-sm btn-primary" type="submit" value="수정" onclick="updateOpen('update',<?php echo "'".$R['po_id']."'"?>)"></td>
+					<td class="td_mngsmall"><input class="btn btn-sm btn-primary" type="button" value="수정" onclick="updateOpen('update',<?php echo "'".$R['po_id']."'"?>)"></td>
 				</tr>
 			
 			<?php endwhile; ?>
@@ -134,8 +136,15 @@ function excelform(url)
 }
 
 function updateOpen(cmd, v){
-	document.alistForm.smod.value = cmd;
-	document.alistForm.pid.value = v;
+	location.href = "?r=" + <?php echo '"'.$r.'"' ?> + "&c=" + <?php echo '"'.$c.'"' ?> + "&m=" + <?php echo '"'.$m.'"' ?> + "&mod=" + <?php echo '"'.$mod.'"' ?> + "&smod=" + cmd + "&pid=" + v
+}
+
+function check_all(){
+
+	var checked = $('#chkall').prop('checked');
+	console.log(checked);
+	$('input[name="chk[]"]').prop('checked', checked);
+	
 }
 
 function complate_confirm()
@@ -155,19 +164,7 @@ function complate_confirm()
 }
 
 
-
-$(function() {
-    $('#fpolllist').submit(function() {
-        if(confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?")) {
-            if (!is_checked("chk[]")) {
-                alert("선택삭제 하실 항목을 하나 이상 선택하세요.");
-                return false;
-            }
-
-            return true;
-        } else {
-            return false;
-        }
-    });
-});
+function deletePoll(){
+	document.alistForm.a.value = 'poll_delete';
+}
 </script>

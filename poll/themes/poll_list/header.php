@@ -38,28 +38,36 @@ $smod = $smod ? $smod : '';
 	<!-- 탭 메뉴 상단 시작 -->
 	<ul class="tabs">
 		<li class="tab-link <?php if($mod == "list") :?>current <?php endif?>" data-tab="list">투표리스트</li>
-		<li class="tab-link <?php if($mod == "admin.poll.list") :?>current <?php endif?>" data-tab="admin.poll.list">관리자메뉴</li>
+		<li class="tab-link <?php if($mod == "adminpolllist") :?>current <?php endif?>" data-tab="adminpolllist">관리자메뉴</li>
 	</ul>
 	<!-- 탭 메뉴 상단 끝 -->
 	<!-- 탭 메뉴 내용 시작 -->
-	<div id="list" class="tab-content <?php if($mod == "list") :?>current <?php endif?>">
+	<?php if($mod == "list") :?>
+	<div id="list" class="tab-content current ">
 		<?php 
 		if($smod == ''){
 			include 'list.php'; 
 		}elseif($smod == 'result'){
 			include 'result.php'; 
+		}elseif($smod == 'step1'){
+			include 'personcheck.php'; 
+		}elseif($smod == 'step2'){
+			include 'voteing.php'; 
 		}
 		?>
 	</div>
-	<div id="admin.poll.list" class="tab-content <?php if($mod == "admin.poll.list") :?>current <?php endif?>">		
-		<?php 
-		if($smod == ''){
-			include 'admin.poll.list.php'; 
-		}elseif($smod == 'update' || $smod == 'insert'){
-			include 'admin.poll.update.php'; 
-		}
-		?>
-	</div>
+	<?php endif?>
+	<?php if($mod == "adminpolllist") :?> 
+		<div id="adminpolllist" class="tab-content current">		
+			<?php 
+			if($smod == ''){
+				include 'adminpolllist.php'; 
+			}elseif($smod == 'update' || $smod == 'insert'){
+				include 'adminpollupdate.php'; 
+			}
+			?>
+		</div>
+	<?php endif?>
 	<!-- 탭 메뉴 내용 끝 -->
 </div>
 <div class="container">
@@ -74,8 +82,8 @@ $(document).ready(function(){
 		
 		if(tab_id == 'list'){
 			document.hiddenform.mod.value = 'list';
-		}else if(tab_id == 'admin.poll.list'){
-			document.hiddenform.mod.value = 'admin.poll.list';
+		}else if(tab_id == 'adminpolllist'){
+			document.hiddenform.mod.value = 'adminpolllist';
 		}
 		document.hiddenform.submit();
 	})

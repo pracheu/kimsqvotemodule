@@ -11,10 +11,11 @@ $day2	= $day2   ? $day2   : substr($date['today'],6,2);
 
 
 $sort	= $sort ? $sort : 'po_id';
-$orderby= $orderby ? $orderby : 'asc';
+$orderby= $orderby ? $orderby : 'desc';
 $recnum	= $recnum && $recnum < 200 ? $recnum : 20;
 
 $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목록</a>';
+$_WHERE = 'po_site="'.$s.'"';
 $RCD = getDbArray($table['polllist'],$_WHERE,'*',$sort,$orderby,$recnum,$p);
 $NUM = getDbRows($table['polllist'],$_WHERE);
 $TPG = getTotalPage($NUM,$recnum);
@@ -94,6 +95,10 @@ $colspan = 9;
 <script>
 function resultOpen(v){
 	document.listForm.smod.value = "result";
+	document.listForm.pid.value = v;
+}
+function startVote(v){
+	document.listForm.smod.value = "step1";
 	document.listForm.pid.value = v;
 }
 

@@ -30,7 +30,7 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 	<form name="writeForm" method="post" action="<?php echo $g['s']?>/" target="_action_frame_<?php echo $m?>" onsubmit="return updateCheck(this);">
 	<input type="hidden" name="pid" value="<?php echo $pid ?>">
 	<input type="hidden" name="r" value="<?php echo $r?>" />
-	<input type="hidden" name="a" value="update" />
+	<input type="hidden" name="a" value="poll_update" />
 	<input type="hidden" name="m" value="<?php echo $m?>" />
 	<input type="hidden" name="mod" value="<?php echo $mod?>" />
 	<input type="hidden" name="smod" value="<?php echo $smod?>" />
@@ -122,8 +122,9 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 		<tr id="printArea">
 			<th class="tleft" scope="row"><label for="mb_ids">선거 인명부 리스트</label></th>
 			<td>
-				<table id="parea" style="border:1px;width:100%;height:200px;overflow-y:scroll;border:1px solid;">
-				<tr>
+				<table id="parea" style="width:100%;overflow-y:scroll;border:1px solid;">
+				<tbody>
+				<tr height="40">
 					<th>번호</th>
 					<th>투표유무</th>
 					<th>동</th>
@@ -134,7 +135,7 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 				</tr>
 				<?php $i = 0; ?>
 				<?php while($U=db_fetch_array($UCD)):?>
-					<tr>
+					<tr style="border:1px solid;" height="40">
 						<td><?php echo ++$i; ?></td>
 						<td>
 							<?php if($U['puse']==1) : ?>
@@ -149,13 +150,23 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 						<td><?php echo $U['birth'] ?></td>
 						<td>
 						
-						<?
-						?>
+						<?php if(file_exists($g['path_module']."/".$m."/files/".$r."/sign_file/".$U['po_id'].$U['idx'].$U['dong'].$U['hosu'].".png")) : ?>
+							<img src="<?php echo $g['path_module']."/".$m."/files/".$r."/sign_file/".$U['po_id'].$U['idx'].$U['dong'].$U['hosu'].".png"?>" width="80" height="40">
+						<?php endif ?>
 						
 						</td>
 					</tr>
 				<?php endwhile ?>
-					
+				<?php if($i == 0) :?>
+					<tr style="border:1px solid;" height="40">
+						<td colspan="7">
+						
+							등록된 인명부가 없습니다.
+						
+						</td>
+					</tr>
+				<?php endif ?>
+				</tbody>
 				</table>
 
 			</td>
@@ -174,8 +185,6 @@ $UCD = getDbArray($table['polluser'], $where, '*', $sort, $orderby, $recnum, $p)
 		<?php endif ?>
 		<button type="button" class="btn btn-sm btn-primary" onclick="returnList()">목록으로</button>
 		<button type="button" class="btn btn-sm btn-primary">결과출력</button>
-		<a href="./poll_list2.php?<?php echo $qstr ?>">목록</a>
-		<a href="./poll_print.php?po_id=<?php echo $po_id ?>" target=_blank>결과출력</a>
 	<br><br><font color=#ff0000>※ 결과출력(새창에서 오른쪽 마우스 버튼을 누르고 인쇄하기를 하시면 됩니다)</font>
 	</div>
 
